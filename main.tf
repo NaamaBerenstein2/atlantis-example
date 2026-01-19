@@ -7,4 +7,8 @@ terraform {
   }
 }
 
-resource "null_resource" "example" {}
+resource "null_resource" "example" {
+  triggers = {
+    value = "A new value to force a change"
+  }
+}
